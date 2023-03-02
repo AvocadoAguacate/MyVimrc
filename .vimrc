@@ -39,6 +39,7 @@ Plug 'neoclide/coc.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'tpope/vim-commentary'
+Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
 let mapleader = ","

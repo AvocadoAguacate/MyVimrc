@@ -28,6 +28,7 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+
 call plug#begin()
 Plug 'jooize/vim-colemak'
 Plug 'tpope/vim-surround'
@@ -48,5 +49,20 @@ let mapleader = ","
 map <leader>q :q<cr> 
 map <leader>w :w<cr> 
 map <leader>wq :wq<cr>
+" NERDTree
+map <leader>nt :NERDTreeToggle<cr>
+map <C-h> <C-W>j
+map <C-i> <C-W>k
+map <C-n> <C-W>h
+map <C-e> <C-W>l
+" regular tamano
+map <leader>m <C-w><
+map <leader>mm <C-w><<C-w><
+map <leader>mmm <C-w><<C-w><<C-w><
+map <leader>. <C-w>>
+map <leader>.. <C-w>><C-w>>
+map <leader>... <C-w>><C-w>><C-w>>
+" Insertar la linea actual al terminal y el resultado al archivo
 map <leader>sh !!$SHELL<cr>
+" Comments
 map cc gcc 

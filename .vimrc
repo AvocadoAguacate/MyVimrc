@@ -1,9 +1,5 @@
 syntax on
 
-if has("autocmd")
-	au BufReadPost * if line("'\'") > 1 && line("'\'") <= line("$") | exe "normal! g"
-endif
-
 set background=dark	
 set number relativenumber
 
@@ -11,7 +7,18 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 set autoindent
+
+" filetype on
+filetype plugin on
 filetype indent on
+
+" Configuración manual de extensiones
+" au BufNewFile,BufRead * :filetype detect
+au BufNewFile,BufRead *.js set filetype=javascript
+au BufNewFile,BufRead *.test.js set filetype=testjavascript
+au BufNewFile,BufRead *.jsx set filetype=javascriptreact
+au BufNewFile,BufRead *.tsx set filetype=typescriptreact
+au BufNewFile,BufRead *.css set filetype=css
 
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: There's always complete item selected by default, you may want to enable
@@ -28,10 +35,12 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+let g:vim_jsx_pretty_colorful_config = 1 
 
 call plug#begin()
 Plug 'jooize/vim-colemak'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'dracula/dracula-theme'
@@ -39,12 +48,17 @@ Plug 'easymotion/vim-easymotion'
 Plug 'neoclide/coc.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'kristijanhusak/vim-carbon-now-sh'
-Plug 'tpope/vim-commentary'
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'preservim/nerdtree'
 call plug#end()
 
 let mapleader = ","
+" movimientos
+" media pantalla
+map N <C-d>
+map E <C-u>
 " Guardar y salir
 map <leader>q :q<cr> 
 map <leader>w :w<cr> 

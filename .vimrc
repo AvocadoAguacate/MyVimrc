@@ -44,9 +44,9 @@ Plug 'preservim/nerdtree'
 call plug#end()
 
 let mapleader = ","
-map <leader>tc :tabclose<cr>	
-map <leader>te :Texplore<cr>
-map <leader>tt gt
-map <leader>ts gT
+" Guardar y salir
+map <leader>q :q<cr> 
+map <leader>w :w<cr> 
+map <leader>wq :wq<cr>
 map <leader>sh !!$SHELL<cr>
 map cc gcc 

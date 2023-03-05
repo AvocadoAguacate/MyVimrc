@@ -43,7 +43,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'dracula/dracula-theme'
 Plug 'easymotion/vim-easymotion'
 Plug 'neoclide/coc.nvim'
 Plug 'vim-airline/vim-airline'
@@ -52,7 +51,10 @@ Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'preservim/nerdtree'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
+
+colorscheme dracula
 
 let mapleader = ","
 " movimientos
